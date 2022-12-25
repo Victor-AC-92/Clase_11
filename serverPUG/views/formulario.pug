@@ -1,0 +1,18 @@
+extends encabezado
+
+block formulario 
+    div(class="container")
+        div(class="jumbotron")
+            h1(style="color: blue") Ingresar datos 
+            br
+            form(action="/productos" method="post")
+                div(class="form-group")
+                    label Nombre
+                    input(id="nombre" class="form-control" type="text" name="nombre")
+                div(class="form-group")
+                    label Precio 
+                    input(id="precio" class="form-control" type="number" name="precio")
+                div(class="form-group")
+                    label Url de imagen
+                    input(id="url" class="form-control" type="url" name="url")
+                button(class="btn btn-success mt-3 mb-5") Enviar

@@ -1,0 +1,20 @@
+extends encabezadoTabla 
+
+block tabla 
+    - if(productos.length > 0)
+        div(class="table-responsive")
+            table(class="table table-dark")
+                tr(style="color: yellow")
+                    th Nombre
+                    th Precio
+                    th Imagen
+                each producto in productos
+                 tr
+                    td(style="vertical-align:middle")= producto.nombre 
+                    td(style="vertical-align:middle")= producto.precio
+                    td 
+                        img(src=producto.url height="40px" width="40px")
+    - else
+        h3(class="alert alert-danger") No se encontraron datos
+
+    a(class="btn btn-back btn-success mt-3 mb-5" style="margin: 10px;" href="/") Volver al formulario         

@@ -9,9 +9,11 @@
             </tr>
             <% productos.forEach(function(producto) {%>
             <tr>
-                <td><%=producto.nombre%></td>
-                <td><%=producto.precio%></td>
-                <td><%=producto.url%></td>
+                <td style="vertical-align:middle"><%=producto.nombre%></td>
+                <td style="vertical-align:middle"><%=producto.precio%></td>
+                <td>
+                    <img src="<%=producto.url%>" height="40px" width="40px"></img>
+                </td>
             </tr>
             <% }); %>
         </table>
@@ -19,4 +21,4 @@
 <% } else { %>
     <h3 class="alert alert-danger"> No se encontraron datos </h3>
 <% } %>
-<button class="btn btn-back btn-success mt-3 mb-5" style="margin: 10px;" href="/">Volver al formulario</button>
+<a class="btn btn-back btn-success mt-3 mb-5" style="margin: 10px;" href="/">Volver al formulario</a>

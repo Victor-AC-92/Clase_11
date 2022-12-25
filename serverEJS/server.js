@@ -2,10 +2,10 @@ const express = require('express')
 const app = express()
 
 class Producto {
-    constructor (title, price, thumbnail){
-        this.title = title;
-        this.price = price;
-        this.thumbnail = thumbnail;
+    constructor (nombre, precio, url){
+        this.nombre = nombre;
+        this.precio = precio;
+        this.url = url;
     }
 }
 
@@ -30,14 +30,6 @@ app.get('/productos', (req, res) => {
 app.get('/', (req, res) => {
     res.render('formulario', {productos})
 })
-
-/* let btn_element = getElementById("btn-back");
-
-btn_element.onclick = () => {
-    app.get('/', (req, res) => {
-        res.render('formulario', {productos})
-    })
-}; */
 
 const PORT = 8080
 const server = app.listen(PORT, () => {
